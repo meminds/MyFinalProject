@@ -22,5 +22,15 @@ namespace Business.Concrete
             // Bu yüzden yukarıda yazdığımız cons.'ı kullanırız.
             return _productDal.GetAll();
         }
+
+        public List<Product> GetAllByCategoryId(int id)
+        {
+            return _productDal.GetAll(item => item.CategoryId == id);
+        }
+
+        public List<Product> GetByUnitPrice(decimal min, decimal max)
+        {
+            return _productDal.GetAll(item => item.UnitPrice >= min && item.UnitPrice <= max);
+        }
     }
-}
+} 
