@@ -1,10 +1,10 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     public interface IEntityRepository<T> where T: class,IEntity,new()   // T'yi sınırlandırmak gerekiyor  generic constraint   Generic kısıt demek
     {                                                                    // class,IEntity,new() :: IEntty implement eden ve new'lenebilir olmalı
